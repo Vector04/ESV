@@ -55,4 +55,3 @@ plt.grid()
 
 plt.savefig('11.png')
 plt.show()
-
