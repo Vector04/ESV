@@ -47,7 +47,8 @@ class floatE:
             f_val = self.val / 10**val_order
             f_error = self.error / 10**val_order
             format_arg = f".{d_order+1}f"
-            return f"({f_val:{format_arg}} \u00B1 {f_error:{format_arg}})\u00B710{power(val_order)}"
+            # return f"({f_val:{format_arg}} \u00B1 {f_error:.8f})\u00B710{power(val_order)}"
+            return f"{self.val} \u00B1 {self.error}"
         else:
             format_arg = f".{abs(error_order)+3}g"
             return f"{self.val:{format_arg}} \u00B1 {self.error:.2g}"
